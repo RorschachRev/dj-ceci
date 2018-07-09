@@ -1,0 +1,28 @@
+.demo {
+    text-align: center;
+    color: grey;
+}
+
+video {
+    background: #222;
+    margin: 0 0 20px 0;
+    width: initial;
+}
+
+.section.demo { 
+    padding-top: 100px;
+}
+
+@media screen and (max-width: 1023px) {
+    canvas {
+        background-color: #ccc;
+        max-width: 100%;
+        width: 100%;
+    }
+    audio {
+        max-width: 100%;
+    }
+    video {
+        width: 100%;
+    }
+}

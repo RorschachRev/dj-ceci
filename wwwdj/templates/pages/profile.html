@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Signup{% endblock %}
+
+{% block content %}
+    <div id="main" style="padding-top: 86px">
+	    <h2>Profile:</h2>
+		<form action="" method="post">
+			<table>
+				{% csrf_token %}
+				{{ user_form }}
+				{{ profile_form }}
+			</table>
+			<input type="submit" value="Submit" />
+		</form>
+		{% if messages %}
+			<ul class="messages">
+				{% for message in messages %}
+				<li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+					{% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
+					{{ message }}
+				</li>
+				{% endfor %}
+			</ul>
+    </div>
+{% endif %}
+{% endblock %}
