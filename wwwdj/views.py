@@ -26,6 +26,12 @@ def index(request):
 def contact(request):
 	return render(request,'pages/contact.html', { 'contact':contact } )
 	
+def map(request):
+	return render(request,'pages/map.html', { 'map':map } )
+	
+def advertise(request):
+	return render(request,'pages/advertise.html', { 'advertise':advertise } )
+	
 #@login_required
 #@transaction.atomic
 def update_profile(request):

@@ -1,7 +1,7 @@
 
 {% extends 'base.html' %}
 
-{% block title %}DROIT GROUP{% endblock %}
+{% block title %}C'est Food{% endblock %}
 
 {% block content %}
   
@@ -13,8 +13,8 @@
         <div class="container h-100 each-feature event-top" >
             <div class="content custom-content">
                 <div class="title-area" style="background:rgba(255,255,255,0.75);">
-                     <h1 class="title-modern font-w-700 custom-header-title hidden-x text-uppercase" style="color:#000; margin-top: -10%;">CeCi Food</h1>
-                     <h3 class="font-alt font-w-700 text-uppercase" style="padding-top: 10px; color: #000;">A search could look good here. This background can be more smooth, too.</h3>
+                     <h1 class="title-modern font-w-700 custom-header-title hidden-x" style="color:#000; margin-top: -10%; font-family: 'Pacifico', cursive;">C'est Food!</h1>
+                     <h3 class="font-alt font-w-700" style="padding-top: 10px; color: #000;">A search could look good here. This background can be more smooth, too.</h3>
 					 <p style="color: #000;">More content will also make it look better</p>
                 </div>
             </div>
@@ -23,7 +23,7 @@
 </section>
 
  <!--   ABOUT SECTION -->
-<section id="about" style="padding-top: 10px; padding-bottom: 60px" class="bg-white">
+<section id="buttons" style="padding-top: 10px; padding-bottom: 60px" class="bg-white">
     <div class="each-feature" style="margin-top: 20px; margin-bottom: 20px" >
         <div class="container-fluid">    
             <div class="row">
@@ -52,7 +52,7 @@
 
 
 <!-- Image Space 1-->
-<div class="section features">
+<div class="about" id="abt">
     <div class="each-feature event-image-1">
         <div class="container">
             <div class="row">
@@ -80,7 +80,7 @@ of aviation,</h1>
 <!--end of Image space 1-->
 
 <!-- Services Section -->
-<section id="services">
+<section id="adv">
     <div class="each-feature event-image-3">
         <div class="container">
             <div class="row" style="padding-top: 60px; padding-bottom: 60px">
@@ -89,7 +89,12 @@ of aviation,</h1>
                     <br>
                     <h2 class="font-alt font-w-700 letter-spacing-2 m-0 text-uppercase">Yellow, black. Yellow, black. Yellow, black. Yellow, black.</h2>
                     <h3 class="font-alt font-w-700 letter-spacing-2 m-0 text-uppercase">Ooh, black and yellow! Let's shake it up a little.</h3>
-                    <h3 class="font-alt font-w-700 letter-spacing-2 m-0 text-uppercase">Barry! Breakfast is ready! Ooming! Hang on a second. Hello?</h3>
+                    <h3 class="font-alt font-w-700 letter-spacing-2 m-0 text-uppercase">Barry! Breakfast is ready! Ooming! Hang on a second. Hello?
+					<br />
+					<br />
+					<br />
+					<a href="/advertise.html" class="btn btn-secondary btn-lg" style="position: relative; margin-left: 40%; min-width: 250px; font-size: 16pt; border-width: 4px" role="button" aria-pressed="true">Read More</a>
+					</h3>
                     <br>
                 </div>
             </div>
@@ -101,7 +106,7 @@ of aviation,</h1>
 
 
 <!-- Image Space 2 with text-->
-<section id="keys">    
+<section id="blockchain">    
     <div class="each-feature event-image-9" style="padding-top: 60px; padding-bottom: 60px">
         <div class="container" style="margin-top: 10px; margin-bottom: 10px">
             <div class="row">
@@ -114,6 +119,35 @@ of aviation,</h1>
     </div>
 </section>
 </div>
+
+<!--Smooth scrolling for nav links that are on the same page-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
 
 
 {% endblock %}

@@ -1,5 +1,5 @@
 {% load staticfiles %}
-<nav class="navbar navbar-default navbar-transparent navbar-fixed-top" color-on-scroll="200" style="background-color: #E47C25">
+<nav class="navbar navbar-default navbar-transparent navbar-fixed-top" color-on-scroll="200" style="background-color: #E47C25;">
     <!-- if you want to keep the navbar hidden you can add this class to the navbar "navbar-burger"-->
     <div class="container">
         <div class="navbar-header">
@@ -10,21 +10,27 @@
                 <span class="icon-bar bar3"></span>
             </button>
             <a href="{% url 'index' %}" class="navbar-brand">
-                <img src="{% static 'img/logos/GroupOnBlack.png' %}" style="height: 100%">
+                <img src="{% static 'img/logos/cestlogo.png' %}" style="height: 100%">
             </a>
         </div>
         <div class="collapse navbar-collapse">
 
             <ul class="nav navbar-nav navbar-right navbar-uppercase">
-                            <li class="nav-item">
-                                <a class="nav-link" href="/index.html#about">About</a>
+							 <li class="nav-item">
+                                <a class="nav-link" href="/index.html#search">Search Records</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/index.html#services">Services</a>
+                                <a class="nav-link" href="/map.html">Map</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/members.html">Members</a>
+							<li class="nav-item">
+                                <a class="nav-link" href="/index.html#adv">Advertise</a>
                             </li>
+							<li class="nav-item">
+                                <a class="nav-link" href="/index.html#abt">About</a>
+                            </li> 
+							<li class="nav-item">
+                                <a class="nav-link" href="/index.html#blockchain">Blockchain</a>
+                            </li> 
                             <!-- <li class="nav-item">
                                 <a class="nav-link" href="/index.html#team">Our Team</a>
                             </li> -->

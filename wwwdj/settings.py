@@ -25,7 +25,7 @@ SECRET_KEY = '^%p#ph5f*rpq32iz5dtlz*xj&!^rn@p9pw)jvt^9&h-o51ejge'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['droit.group', 'cecifood.com','foodapp.droit.group','foodapp.cecifood.com']
+ALLOWED_HOSTS = ['droit.group', 'cecifood.com','foodapp.droit.group','foodapp.cecifood.com', '127.0.0.1']
 
 
 # Application definition

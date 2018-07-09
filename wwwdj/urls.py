@@ -29,6 +29,8 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^signup.html$', views.signup, name='signup'),
     url(r'^contact.html$', views.contact, name='contact'),
+	url(r'^map.html$', views.map, name='map'),
+	url(r'^advertise.html$', views.advertise, name='advertise'),
     url(r'^profile.html$', views.update_profile, name='profile'),
     url(r'^accounts/profile/$', views.update_profile, name='profile'),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
