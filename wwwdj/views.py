@@ -3,6 +3,7 @@ from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
+import redis
 from .forms import ProfileForm, UserForm
 from .models import Profile
 
@@ -30,7 +31,9 @@ def map(request):
 	return render(request,'pages/map.html', { 'map':map } )
 	
 def advertise(request):
-	return render(request,'pages/advertise.html', { 'advertise':advertise } )
+	r=redis.StrictRedis(host='localhost', port=6379, db=0)
+	k=r.keys().__len__()
+	return render(request,'pages/advertise.html', { 'advertise':advertise, 'keys':k } )
 	
 #@login_required
 #@transaction.atomic
