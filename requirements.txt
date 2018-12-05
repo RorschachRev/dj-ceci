@@ -1,0 +1,5 @@
+Django==1.11.14
+django-redis==4.10.0
+pkg-resources==0.0.0
+pytz==2018.5
+redis==3.0.1
